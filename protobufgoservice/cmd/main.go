@@ -20,7 +20,7 @@ func run() error {
 	router := gin.Default()
 	router.Use(cors.Default())
 
-	// create steam service
+	// create service
 	service := pkg.NewProtobufGoService()
 
 	server := app.NewServer(router, service)
