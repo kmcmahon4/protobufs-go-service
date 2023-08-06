@@ -1,0 +1,12 @@
+syntax = "proto3";
+option go_package = "./";
+
+message MyMessage {
+  // Define your message fields here
+  string name = 1;
+  int32 age = 2;
+}
+
+message Response {
+  string status = 1;
+}
