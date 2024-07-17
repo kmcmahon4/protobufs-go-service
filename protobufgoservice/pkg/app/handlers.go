@@ -27,5 +27,7 @@ func (s *Server) healthCheck() gin.HandlerFunc {
 		// Send the Protobuf response to the client
 		c.ProtoBuf(http.StatusOK, response)
 
+		// helllo
+
 	}
 }
