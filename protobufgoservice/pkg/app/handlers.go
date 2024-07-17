@@ -12,6 +12,8 @@ func (s *Server) healthCheck() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Header("Content-Type", "application/protobuf")
 
+		//hey
+
 		// Read the Protobuf request data from the request body
 		var request models.MyMessage
 		if err := c.ShouldBind(&request); err != nil {
