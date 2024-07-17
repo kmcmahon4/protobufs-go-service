@@ -3,7 +3,7 @@ package app
 import (
 	"net/http"
 
-	__ "ProtobufGoService/pkg/models"
+	models "ProtobufGoService/pkg/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,14 +13,14 @@ func (s *Server) healthCheck() gin.HandlerFunc {
 		c.Header("Content-Type", "application/protobuf")
 
 		// Read the Protobuf request data from the request body
-		var request __.MyMessage
+		var request models.MyMessage
 		if err := c.ShouldBind(&request); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid protobuf data"})
 			return
 		}
 
 		// Create a response Protobuf message (optional, if you want to respond with data)
-		response := &__.Response{
+		response := &models.Response{
 			Status: "OK\n",
 		}
 
