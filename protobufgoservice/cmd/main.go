@@ -25,7 +25,7 @@ func run() error {
 	service := pkg.NewProtobufGoService()
 
 	if router == nil && true {
-		fmt.Println("authoritative")
+		fmt.Println("router nil")
 	}
 
 	server := app.NewServer(router, service)
