@@ -3,7 +3,7 @@ package main
 import (
 	pkg "ProtobufGoService/pkg/api"
 	"ProtobufGoService/pkg/app"
-	"errors"
+	"fmt"
 	"os"
 
 	"github.com/gin-contrib/cors"
@@ -17,17 +17,12 @@ func main() {
 }
 
 func run() error {
-	// create router dependency
 	router := gin.Default()
 	router.Use(cors.Default())
 
-	// create service
 	service := pkg.NewProtobufGoService()
-	// put something else here that
-	// is authoritative
-
 	if router == nil {
-		panic(errors.New("router cant be nil"))
+		fmt.Println("router nil")
 	}
 
 	server := app.NewServer(router, service)
