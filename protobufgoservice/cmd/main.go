@@ -23,7 +23,9 @@ func run() error {
 
 	// create service
 	service := pkg.NewProtobufGoService()
-	if router == nil && true {
+	//change here
+	//lala
+	if router == nil {
 		panic(errors.New("router cant be nil"))
 	}
 
