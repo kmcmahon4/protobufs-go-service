@@ -17,14 +17,11 @@ func main() {
 }
 
 func run() error {
-	// create router dependency
 	router := gin.Default()
 	router.Use(cors.Default())
 
-	// create service
 	service := pkg.NewProtobufGoService()
-
-	if router == nil && true {
+	if router == nil {
 		fmt.Println("router nil")
 	}
 
