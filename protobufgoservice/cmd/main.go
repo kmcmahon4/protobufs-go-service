@@ -26,6 +26,8 @@ func run() error {
 	// change stuff here
 	// to test
 	// git operations
+	// change here
+	// to test even more
 	if router == nil {
 		panic(errors.New("router cant be nil"))
 	}
